@@ -9,45 +9,53 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="milestone-style.css" type="text/css"/>
+    <script src="https://kit.fontawesome.com/b0782064da.js" crossorigin="anonymous"></script>
 
-    <title>PWP Milestone 2</title>
+    <title>Deon Butler | Professional Portfolio</title>
 </head>
-<body onload="fadeIn()" style="background-color: #b2b2b2">
+<body onload="fadeIn()">
 
 <!-- Navbar -->
-<div class="md-4 container-fluid bg-dark position-fixed fs-5">
-    <nav class="container navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand text-light" href="#">Deon Butler</a>
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav ms-auto">
-                <ul class="navbar-nav">
-                    <li class="nav-item ms-2">
-                        <a class="nav-link text-light" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item ms-2">
-                        <a class="nav-link text-light" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item ms-2">
-                        <a class="nav-link text-light" href="#contact">Contact Me</a>
-                    </li>
-                </ul>
+<div id="nav" class="container-fluid fs-5">
+    <div id="toggle-icon" class="text-center">
+        <input type="checkbox" id="coding">
+        <i class="fa-solid fa-sun"></i>
+        <label id="theme-switch" class="toggle-text">Light Mode</label>
+    </div>
+    <div class="row">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">Deon Butler</a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-solid fa-bars" style="font-size: 20px;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ms-2">
+                            <a class="navbar-brand" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a class="navbar-brand" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a class="navbar-brand" href="#contact">Contact Me</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 </div>
 
 <br>
-<!--------------------------------------------------------------------------------------------------------------------->
-<br>
 
+<!--About Me--->
 <section class="my-3 py-5">
     <div class="container">
         <div class="row g-4">
-            <div class="col-md-4">
+            <div class="col-md-4 pt-5">
                 <img src="https://c.tenor.com/xafrt118nacAAAAC/gintoki-waving-anime.gif"
                      class="img-fluid d-block mx-auto" width="300" height="300" alt="Placeholder"/>
             </div>
@@ -55,7 +63,10 @@
                 <h1 class="display-5 fw-bold">
                     "Hello, World!
                 </h1>
-                <p class="fs-5">My name is Deon. I'm a military veteran that proudly served in the U.S. Army for years
+                <p class="fs-5 text-box">My name is Deon. I'm a military veteran that proudly served in
+                    the U.S.
+                    Army for
+                    years
                     before realizing that my true calling is in development. I learned many amazing skills while in, but
                     nowadays, you can usually catch me coding in my free time. I have experience in fullstack web
                     development, networking and information systems, and ethical hacking.</p>
@@ -64,6 +75,7 @@
     </div>
 </section>
 
+<!--Skills-->
 <section id="skills">
     <div class="container p-4">
         <h2>Skills</h2>
@@ -72,7 +84,9 @@
                 <h3>
                     Soft Skills
                 </h3>
-                <img src="soft-skills2.png" class="img my-3" alt="Soft Skills" style="border: none"/>
+                <span class="fas">
+                    <i class="fa-solid fa-people-group"></i>
+                </span>
                 <ul class="no-bullets px-4">
                     <li>Interpersonal Skills</li>
                     <li>Verbal and Written Communication</li>
@@ -88,7 +102,9 @@
                 <h3>
                     Certifications
                 </h3>
-                <img src="experience.png" class="img my-3" alt="Experience" style="border: none"/>
+                <span class="fas">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </span>
                 <ul class="no-bullets px-4">
                     <li>Bachelor's of Science in Information Technology, Programming</li>
                     <li>Fullstack Web Development Bootcamp</li>
@@ -97,11 +113,13 @@
                     <li>Open Source Intelligence (OSINT) Certified</li>
                 </ul>
             </div>
-            <div class="col-md-4 p-2 text-center mt-5">
+            <div class="col-md-4 p-2 text-center justify-content-center mt-5">
                 <h3>
                     Technical Skills
                 </h3>
-                <img src="code-icon.png" class="img my-3" alt="Tech Skills" style="border: none"/>
+                <span class="fas">
+                    <i class="fa-solid fa-code"></i>
+                </span>
                 <ul class="no-bullets px-4">
                     <li>Java</li>
                     <li>JavaScript</li>
@@ -117,7 +135,7 @@
     </div>
 </section>
 
-
+<!--Portfolio-->
 <section id="portfolio">
     <div class="container-fluid p-3">
         <div class="container p-4">
@@ -126,12 +144,12 @@
             </div>
             <div class="row">
                 <div class="col-md text-center my-5">
-                    <a href="https://github.com/Deon-J-Butler/think-tank" class="text-decoration-none text-dark">
+                    <a href="https://github.com/Deon-J-Butler/think-tank">
                         <h3>
                             ThinkTank
                         </h3>
                         <img src="ThinkTank.png" class="img-fluid rounded-top rounded-3 " alt="ThinkTank"/>
-                        <p class="rounded-bottom text-dark"
+                        <p class="text-box"
                            style="--bs-bg-opacity: .2;">ThinkTank
                             is a web
                             application that serves as an archive for users to store innovative ideas. (Click to see
@@ -143,48 +161,45 @@
         <div class="container p-4">
             <div class="row gx-5">
                 <div class="col-md-6 p-2 text-center mt-5">
-                    <a href="https://github.com/deepdive-bootcamp-team-pf/pothole-finder"
-                       class="text-decoration-none text-dark">
+                    <a href="https://github.com/deepdive-bootcamp-team-pf/pothole-finder">
                         <h3>
                             Pothole Tracker
                         </h3>
                         <img src="nyc-map.png" class="img-fluid mb-3" width="300" alt="Pothole Tracker"/>
                     </a>
-                    <p class="px-4">A web application that allows users to plot potholes on a map that can be viewed by
+                    <p>A web application that allows users to plot potholes on a map that can be viewed by
                         other users. Later releases will give administrative rights to DoT officials to allow them
                         to see a list of potholes by severity and location for them to set a priority for repairs.</p>
                 </div>
                 <div class="col-md-6 p-2 text-center mt-5">
-                    <a href="https://github.com/Deon-J-Butler/pong" class="text-decoration-none text-dark">
+                    <a href="https://github.com/Deon-J-Butler/pong">
                         <h3>
                             Pong
                         </h3>
                         <img src="pong.png" class="img-fluid mb-3" width="300" alt="Pong"/>
                     </a>
-                    <<p>Test your skills playing pong against a supercomputer. Be careful, it always goes for the
-                    spike.</p>
+                    <p>Test your skills playing pong against a supercomputer. Be careful, it always goes for the
+                        spike.</p>
                 </div>
             </div>
         </div>
         <div class="container p-4 mb-5">
             <div class="row">
                 <div class="col-md-6 p-2 text-center mt-5">
-                    <a href="https://github.com/Deon-J-Butler/" class="text-decoration-none text-dark">
+                    <a href="https://github.com/Deon-J-Butler/">
                         <h3>
-                            Project Name
+                            Light and Dark Mode
                         </h3>
-                        <img src="https://www.nomadfoods.com/wp-content/uploads/2018/08/placeholder-1-e1533569576673-960x960.png"
-                             class="img-fluid mb-3" width="300" alt="Placeholder"/>
+                        <img src="light-dark.png" class="img-fluid mb-3" width="300" alt="Duality"/>
                     </a>
-                    <p>-Description of project-</p>
+                    <p>This is a project showcasing how to turn a website from light to dark mode and vice versa.</p>
                 </div>
                 <div class="col-md-6 p-2 text-center mt-5">
-                    <a href="https://github.com/Deon-J-Butler/professional-portfolio"
-                       class="text-decoration-none text-dark">
+                    <a href="https://github.com/Deon-J-Butler/professional-portfolio">
                         <h3>
                             Professional Portfolio
                         </h3>
-                        <img src="pwp.png" class="img-fluid mb-3" width="300" alt="Placeholder"/>
+                        <img src="pwp.png" class="img-fluid mb-3" width="300" alt="Personal Website"/>
                     </a>
                     <p>Not quite recursion. Click to take a peek through the looking glass!</p>
                 </div>
@@ -194,6 +209,7 @@
 </section>
 <br>
 
+<!--Contact-->
 <section id="contact">
     <div class="container text-left box">
         <div class="container p-3">
@@ -240,25 +256,27 @@
     </div>
 </section>
 
-<!--------------------------------------------------------------------------------------------------------------------->
-
-
-<div class="container-fluid bg-dark text-center text-light mt-4 py-4">
+<!--Footer--->
+<div class="container-fluid text-center mt-4 py-4">
     <div class="row">
         <p><big>Thanks for visiting. I'd love to connect!</big></p>
     </div>
+
+    <!--Contact Links-->
     <div class="row justify-content-center mb-1">
         <div class="col-md-1">
             <a href="https://github.com/Deon-J-Butler" class="text-decoration-none text-light">
-                <img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Github-512.png"
-                     alt="placeholder" width="50" style="border: none">
+                <span class="fas">
+                    <i class="fa-brands fa-github"></i>
+                </span>
                 <p>GitHub</p>
             </a>
         </div>
         <div class="col-md-1">
             <a href="https://www.linkedin.com/in/deon-j-butler/" class="text-decoration-none text-light">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-                     alt="placeholder" width="50" style="border: none">
+                <span class="fas">
+                    <i class="fa-brands fa-linkedin"></i>
+                </span>
                 <p>LinkedIn</p>
             </a>
         </div>
