@@ -16,11 +16,11 @@
 <body onload="fadeIn()">
 
 <!-- Navbar -->
-<div id="nav" class="container-fluid fs-5">
+<div id="nav" class="container-fluid fs-5 py-0">
     <div id="toggle-icon" class="text-center">
         <input type="checkbox" id="coding">
         <i class="fa-solid fa-sun"></i>
-        <label id="theme-switch" class="toggle-text">Light Mode</label>
+        <label id="theme-switch" class="toggle-text" for="coding">Light Mode</label>
     </div>
     <div class="row">
         <nav class="navbar navbar-expand-lg">
@@ -61,15 +61,14 @@
             </div>
             <div class="col-md-8 px-4">
                 <h1 class="display-5 fw-bold">
-                    "Hello, World!
+                    Hello, World!
                 </h1>
-                <p class="fs-5 text-box">My name is Deon. I'm a military veteran that proudly served in
-                    the U.S.
-                    Army for
-                    years
-                    before realizing that my true calling is in development. I learned many amazing skills while in, but
-                    nowadays, you can usually catch me coding in my free time. I have experience in fullstack web
-                    development, networking and information systems, and ethical hacking.</p>
+                <p class="fs-5 text-box">My name is Deon. I'm a military veteran that proudly served in the U.S. Army
+                    for
+                    more than eight years before realizing that my true calling is in development. I learned many
+                    amazing skills while in, but nowadays, you can usually catch me coding in my free time. I have
+                    experience in fullstack web development, networking and information systems, and SDLC and System
+                    Architecture.</p>
             </div>
         </div>
     </div>
@@ -136,75 +135,60 @@
 </section>
 
 <!--Portfolio-->
+<h2>Portfolio</h2><br>
 <section id="portfolio">
-    <div class="container-fluid p-3">
-        <div class="container p-4">
-            <div class="container">
-                <h2>Portfolio</h2>
-            </div>
-            <div class="row">
-                <div class="col-md text-center my-5">
-                    <a href="https://github.com/Deon-J-Butler/think-tank">
-                        <h3>
-                            ThinkTank
-                        </h3>
-                        <img src="ThinkTank.png" class="img-fluid rounded-top rounded-3 " alt="ThinkTank"/>
-                        <p class="text-box"
-                           style="--bs-bg-opacity: .2;">ThinkTank
-                            is a web
-                            application that serves as an archive for users to store innovative ideas. (Click to see
-                            the source code and find out more).</p>
-                    </a>
-                </div>
-            </div>
+    <div class="container-fluid p-0">
+    <div class="portfolio-container">
+        <button class="handle left-handle my-5">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="slider py-5">
+        <span>
+            <a href="https://github.com/Deon-J-Butler/think-tank">
+                <h3>ThinkTank</h3>
+                <img src="ThinkTank.png" alt="ThinkTank"/>
+            </a>
+            <p class="text-box">ThinkTank is a web application that serves as an archive for users to store innovative ideas. (Click
+                to see the source code and find out more).</p>
+        </span>
+            <span>
+            <a href="https://github.com/deepdive-bootcamp-team-pf/pothole-finder">
+            <h3>Pothole Tracker</h3>
+            <img src="nyc-map.png" alt="Pothole Tracker"/>
+            </a>
+            <p class="text-box">A web application that allows users to plot potholes on a map that can be viewed by
+                other users. Later releases will give administrative rights to DoT officials to allow them to see a
+                list of potholes by severity and location for them to set a priority for repairs.</p>
+        </span>
+            <span>
+            <a href="https://github.com/Deon-J-Butler/pong">
+                <h3>Pong</h3>
+                <img src="pong.png" alt="Pong"/>
+            </a>
+            <p class="text-box">Test your skills playing pong against a supercomputer. Be careful, it always goes for
+                the spike.</p>
+        </span>
+            <span>
+            <a href="https://github.com/Deon-J-Butler/light-and-dark">
+                <h3>Light and Dark Mode</h3>
+                <img src="light-dark.png" alt="Light and Dark"/>
+            </a>
+            <p class="text-box">This is a project showcasing how to turn a website from light to dark mode and vice
+                versa.</p>
+        </span>
+            <span>
+            <a href="https://github.com/Deon-J-Butler/netflix-scroll">
+            <h3>Netflix Scroll</h3>
+            <img src="netflix-scroll.png" alt="Netflix Scroll"/>
+            </a>
+            <p class="text-box">This project shows how to build and implement netflix scroll into a carousel-like
+                element.</p>
+        </span>
         </div>
-        <div class="container p-4">
-            <div class="row gx-5">
-                <div class="col-md-6 p-2 text-center mt-5">
-                    <a href="https://github.com/deepdive-bootcamp-team-pf/pothole-finder">
-                        <h3>
-                            Pothole Tracker
-                        </h3>
-                        <img src="nyc-map.png" class="img-fluid mb-3" width="300" alt="Pothole Tracker"/>
-                    </a>
-                    <p>A web application that allows users to plot potholes on a map that can be viewed by
-                        other users. Later releases will give administrative rights to DoT officials to allow them
-                        to see a list of potholes by severity and location for them to set a priority for repairs.</p>
-                </div>
-                <div class="col-md-6 p-2 text-center mt-5">
-                    <a href="https://github.com/Deon-J-Butler/pong">
-                        <h3>
-                            Pong
-                        </h3>
-                        <img src="pong.png" class="img-fluid mb-3" width="300" alt="Pong"/>
-                    </a>
-                    <p>Test your skills playing pong against a supercomputer. Be careful, it always goes for the
-                        spike.</p>
-                </div>
-            </div>
-        </div>
-        <div class="container p-4 mb-5">
-            <div class="row">
-                <div class="col-md-6 p-2 text-center mt-5">
-                    <a href="https://github.com/Deon-J-Butler/light-and-dark">
-                        <h3>
-                            Light and Dark Mode
-                        </h3>
-                        <img src="light-dark.png" class="img-fluid mb-3" width="300" alt="Duality"/>
-                    </a>
-                    <p>This is a project showcasing how to turn a website from light to dark mode and vice versa.</p>
-                </div>
-                <div class="col-md-6 p-2 text-center mt-5">
-                    <a href="https://github.com/Deon-J-Butler/professional-portfolio">
-                        <h3>
-                            Professional Portfolio
-                        </h3>
-                        <img src="pwp.png" class="img-fluid mb-3" width="300" alt="Personal Website"/>
-                    </a>
-                    <p>Not quite recursion. Click to take a peek through the looking glass!</p>
-                </div>
-            </div>
-        </div>
+        <button class="handle right-handle my-5">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
     </div>
 </section>
 <br>
