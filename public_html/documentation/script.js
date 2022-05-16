@@ -76,6 +76,7 @@ function onHandleClick(handle) {
             slider.style.setProperty("--slider-index", slider.children.length - 1)
         } else {
             slider.style.setProperty("--slider-index", sliderIndex - 1)
+            console.log(sliderIndex)
         }
     }
     if (handle.classList.contains("right-handle")) {
@@ -86,3 +87,43 @@ function onHandleClick(handle) {
         }
     }
 }
+
+const dragSlider = document.querySelector('.slider')
+let dragSliderIndex = parseInt(getComputedStyle(dragSlider).getPropertyValue("--slider-index"))
+let isDown = false
+let startX
+
+dragSlider.addEventListener('touchstart', (e) => {
+    isDown = true
+    dragSlider.classList.add('active')
+    startX = e.touches[0].clientX
+})
+
+dragSlider.addEventListener('touchmove', (e) => {
+    if (!isDown) return
+    e.preventDefault()
+    const drag = e.touches[0].clientX
+
+    if (drag < startX - 100) {
+        if (dragSliderIndex + 1 >= dragSlider.children.length) {
+            dragSlider.style.setProperty("--slider-index", 0)
+        } else {
+            console.log('made it')
+            dragSlider.style.setProperty("--slider-index", dragSliderIndex + 1)
+            console.log(dragSliderIndex)
+        }
+    } else if (drag > startX + 100) {
+        if (dragSliderIndex < 1) {
+            dragSlider.style.setProperty("--slider-index", dragSlider.children.length - 1)
+        } else {
+            console.log('second route')
+            dragSlider.style.setProperty("--slider-index", dragSliderIndex - 1)
+            console.log(dragSliderIndex)
+        }
+    }
+})
+
+dragSlider.addEventListener('touchend', () => {
+    isDown = false
+    dragSlider.classList.remove('active')
+})
