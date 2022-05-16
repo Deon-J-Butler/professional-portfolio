@@ -89,18 +89,15 @@ function onHandleClick(handle) {
 }
 
 const dragSlider = document.querySelector('.slider')
-let dragSliderIndex = parseInt(getComputedStyle(dragSlider).getPropertyValue("--slider-index"))
-let isDown = false
+const dragSliderIndex = parseInt(getComputedStyle(dragSlider).getPropertyValue("--slider-index"))
 let startX
 
 dragSlider.addEventListener('touchstart', (e) => {
-    isDown = true
     dragSlider.classList.add('active')
     startX = e.touches[0].clientX
 })
 
 dragSlider.addEventListener('touchmove', (e) => {
-    if (!isDown) return
     e.preventDefault()
     const drag = e.touches[0].clientX
 
@@ -124,6 +121,5 @@ dragSlider.addEventListener('touchmove', (e) => {
 })
 
 dragSlider.addEventListener('touchend', () => {
-    isDown = false
     dragSlider.classList.remove('active')
 })
