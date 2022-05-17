@@ -38,16 +38,18 @@ $(document).ready(function() {
             }
         },
         submitHandler: (form) => {
+            console.log('this is a test.')
             $('#contact-form').ajaxSubmit({
                 type: 'POST',
-                url: $('#contact-form').attr('action'),
-                success: (ajaxOutput) => {
-                    $('#output-area').css('display', '')
+                url: $('#contact').attr('action'),
+                success:(ajaxOutput) => {
+                    $('#output-area').css('display','')
                     $('#output-area').html(ajaxOutput)
 
-                    if($('.alert-success') >= 1) {
-                        $('#contact-form')[0].reset
+                    if($('.alert-success') >= 1){
+                        $('#contact')[0].reset()
                     }
+
                 }
             })
         }
