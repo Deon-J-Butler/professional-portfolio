@@ -42,7 +42,7 @@ const handlePostRequest = (request: Request, response: Response) => {
     // @ts-ignore
     if (request.recaptcha.error) {
         return response.send(
-            `<div class='alert alert-danger' role='alert'><strong>You just got reCAPTCHA'D</strong> Next time don't be a bot.</div>`
+            `<div class='alert alert-danger' role='alert'><strong>You just got reCAPTCHA'D</strong> Try not being a bot next time.</div>`
         )
     }
 
@@ -82,5 +82,5 @@ indexRoute.route('/').get(handleGetRequest).post(recaptcha.middleware.verify, va
 app.use('/apis', indexRoute)
 
 app.listen(4200, () => {
-    console.log('Connected...')
+    console.log('Server connected successfully...')
 })

@@ -2,5 +2,5 @@
 FROM node:16-slim
 COPY --chown=node:node ./ ./
 RUN npm install --no-optional && npm cache clean --force
-RUN npx index.ts
+RUN npx tsc index.ts
 CMD ["node", "index.js"]
