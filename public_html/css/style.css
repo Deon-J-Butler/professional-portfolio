@@ -19,6 +19,7 @@
     --background: #b2b2b2;
     --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
     --contact: linear-gradient(#ffffff, #cfcfcf, #9f9f9f, #6f6f6f, #3f3f3f);
+    --matrix-scroller: #025126;
     --slider-padding: 5rem;
 }
 
@@ -31,6 +32,7 @@
     --on-background-alt: rgba(255, 255, 255, 0.7);
     --background: #160b33;
     --contact: linear-gradient(#3f3f3f, #6f6f6f, #9f9f9f, #cfcfcf, #ffffff);
+    --matrix-scroller: #009643;
     --slider-padding: 5rem;
 }
 
@@ -120,7 +122,7 @@ h1 {
 
 #matrix-scroll > h1 {
     font-family: 'digital', sans-serif;
-    color: #025126;
+    color: var(--matrix-scroller);
 }
 
 h2 {
