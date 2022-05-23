@@ -151,11 +151,6 @@ h2 {
     transition: transform 500ms ease-in-out;
 }
 
-.slider.active {
-    cursor: grabbing;
-    transform: scale(1.02);
-}
-
 .slider > div {
     max-width: 100%;
     flex: 0 0 100%;
@@ -257,6 +252,7 @@ img {
 
 #contact {
     opacity: 70%;
+    padding: .5rem;
 }
 
 .box {

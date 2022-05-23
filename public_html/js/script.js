@@ -118,38 +118,33 @@ function onHandleClick(handle) {
     }
 }
 
-const dragSlider = document.querySelector('.slider')
-const dragSliderIndex = parseInt(getComputedStyle(dragSlider).getPropertyValue("--slider-index"))
+const slider = document.getElementById("slider")
 let startX
-
-dragSlider.addEventListener('touchstart', (e) => {
-    dragSlider.classList.add('active')
+slider.addEventListener('touchstart', e => {
     startX = e.touches[0].clientX
+    onTouchDrag()
 })
 
-dragSlider.addEventListener('touchmove', (e) => {
-    e.preventDefault()
-    const drag = e.touches[0].clientX
+function onTouchDrag() {
+    const dragSlider = document.querySelector('.slider')
+    const dragSliderIndex = parseInt(getComputedStyle(dragSlider).getPropertyValue("--slider-index"))
 
-    if (drag < startX - 100) {
-        if (dragSliderIndex + 1 >= dragSlider.children.length) {
-            dragSlider.style.setProperty("--slider-index", 0)
-        } else {
-            console.log('made it')
-            dragSlider.style.setProperty("--slider-index", dragSliderIndex + 1)
-            console.log(dragSliderIndex)
+    dragSlider.addEventListener('touchmove', (e) => {
+        e.preventDefault()
+        const drag = e.touches[0].clientX
+
+        if (drag < startX - 100) {
+            if (dragSliderIndex + 1 >= dragSlider.children.length) {
+                dragSlider.style.setProperty("--slider-index", 0)
+            } else {
+                dragSlider.style.setProperty("--slider-index",  dragSliderIndex + 1)
+            }
+        } else if (drag > startX + 100) {
+            if (dragSliderIndex < 1) {
+                dragSlider.style.setProperty("--slider-index", dragSlider.children.length - 1)
+            } else {
+                dragSlider.style.setProperty("--slider-index", dragSliderIndex - '1')
+            }
         }
-    } else if (drag > startX + 100) {
-        if (dragSliderIndex < 1) {
-            dragSlider.style.setProperty("--slider-index", dragSlider.children.length - 1)
-        } else {
-            console.log('second route')
-            dragSlider.style.setProperty("--slider-index", dragSliderIndex - 1)
-            console.log(dragSliderIndex)
-        }
-    }
-})
-
-dragSlider.addEventListener('touchend', () => {
-    dragSlider.classList.remove('active')
-})
+    })
+}
