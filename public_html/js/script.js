@@ -3,11 +3,15 @@ const nav = document.getElementById('nav')
 const toggleIcon = document.getElementById('toggle-icon')
 const textBox = document.getElementsByClassName('text-box')
 
+function fadeIn() {
+    document.body.className = 'fadeIn'
+}
+
 // Dark mode styles
 function darkMode(){
-    nav.style.backgroundColor = 'rgb(0 0 0 / 50%)'
+    nav.style.backgroundColor = 'rgb(0 0 0 / 70%)'
     for (let elem of textBox) {
-        elem.style.backgroundColor = 'rgb(255 255 255 / 50%)'
+        elem.style.backgroundColor = 'rgb(255 255 255 / 85%)'
     }
     toggleIcon.children[2].textContent = 'Dark Mode'
     toggleIcon.children[1].classList.remove('fa-sun')
@@ -16,9 +20,9 @@ function darkMode(){
 
 // Light mode styles
 function lightMode(){
-    nav.style.backgroundColor = 'rgb(255 255 255 / 50%)'
+    nav.style.backgroundColor = 'rgb(255 255 255 / 70%)'
     for (let elem of textBox) {
-        elem.style.backgroundColor = 'rgb(0 0 0 / 50%)'
+        elem.style.backgroundColor = 'rgb(0 0 0 / 70%)'
     }
     toggleIcon.children[2].textContent = 'Light Mode'
     toggleIcon.children[1].classList.remove('fa-moon')
@@ -52,8 +56,34 @@ if (currentTheme) {
     }
 }
 
-function fadeIn() {
-    document.body.className = 'fadeIn'
+window.addEventListener('scroll', matrixScroll)
+
+function matrixScroll() {
+    const matrixScroller = document.getElementById('matrix-scroll').querySelectorAll('h1')
+    matrixScroller.forEach(object => object.innerHTML = shuffleWords(object.innerHTML))
+    const changeWords = document.getElementById('matrix-scroll')
+    const expertise = document.getElementById('expertise')
+    if (changeWords.getBoundingClientRect().top < 280) {
+        matrixScroller[1].innerHTML = '\"What Kind Of Development?\", you ask...'
+        expertise.style.setProperty('opacity', '1')
+        expertise.style.setProperty('transition', 'opacity 2s')
+    } else {
+        matrixScroller[1].innerHTML = shuffleWords('011101001001101010011101001001101010011101001001101010')
+        expertise.style.setProperty('opacity', '0')
+    }
+}
+
+function shuffleWords(string) {
+    let tickerArray = string.split('')
+
+    for (let i = 0; i < tickerArray.length; i++) {
+        let randomNumber = Math.floor(Math.random() * tickerArray.length)
+        // Create a temp variable to transfer values between array indices
+        let temp = tickerArray[i]
+        tickerArray[i] = tickerArray[randomNumber]
+        tickerArray[randomNumber] = temp
+    }
+    return tickerArray.join('')
 }
 
 document.addEventListener("click", e => {
