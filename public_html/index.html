@@ -91,59 +91,65 @@
 
 <!--Skills-->
 <section id="skills">
-    <div class="container p-4">
-        <h2>Skills</h2>
-        <div class="row">
-            <div class="col-md-4 p-2 text-center my-5">
-                <h3>
-                    Soft Skills
-                </h3>
-                <span class="fas">
+    <div class="container">
+        <div class="row m-5">
+            <div class="col-md-2 text-center align-items-center justify-content-center d-flex mt-4 mb-2 me-2 slide-in from-left">
+                <span class="fas fas--skills">
                     <i class="fa-solid fa-people-group"></i>
                 </span>
-                <ul class="no-bullets px-4">
-                    <li>Interpersonal Skills</li>
-                    <li>Verbal and Written Communication</li>
-                    <li>Problem Solving</li>
-                    <li>Attention to Detail</li>
-                    <li>Time Management</li>
-                    <li>Adaptability</li>
-                    <li>Creativity</li>
-                    <li>Leadership</li>
-                </ul>
             </div>
-            <div class="col-md-4 p-2 text-center my-5">
+            <div class="col-md-9 text-box text-box--skills slide-in from-right">
                 <h3>
-                    Certifications
+                    Soft Skills:
                 </h3>
-                <span class="fas">
+                <p>Interpersonal Skills,
+                    Verbal and Written Communication,
+                    Problem-Solving,
+                    Attention to Detail,
+                    Time Management,
+                    Adaptability,
+                    Creativity,
+                    Leadership</p>
+            </div>
+        </div>
+        <div class="row m-5">
+            <div class="col-md-2 text-center align-items-center justify-content-center d-flex mt-4 mb-2 me-2 slide-in from-left">
+                <span class="fas fas--skills">
                     <i class="fa-solid fa-graduation-cap"></i>
                 </span>
-                <ul class="no-bullets px-4">
-                    <li>Bachelor's of Science in Information Technology, Programming</li>
-                    <li>Fullstack Web Development Bootcamp</li>
-                    <li>Associate of Arts in Korean</li>
-                    <li>Advanced Interpersonal Skills</li>
-                    <li>Open Source Intelligence (OSINT) Certified</li>
-                </ul>
             </div>
-            <div class="col-md-4 p-2 text-center justify-content-center my-5">
+            <div class="col-md-9 text-box text-box--skills slide-in from-right">
                 <h3>
-                    Technical Skills
+                    Certifications:
                 </h3>
-                <span class="fas">
+                <p>Bachelor's of Science in Information Technology (Concentration: Programming),
+                    Fullstack Web Development Bootcamp,
+                    Associate of Arts in Korean,
+                    Advanced Interpersonal Skills,
+                    Open Source Intelligence (OSINT) Certified</p>
+            </div>
+        </div>
+        <div class="row m-5">
+            <div class="col-md-2 text-center align-items-center justify-content-center d-flex mt-4 mb-2 me-2 slide-in from-left">
+                <span class="fas fas--skills">
                     <i class="fa-solid fa-code"></i>
                 </span>
-                <ul class="no-bullets px-4">
-                    <li>Java</li>
-                    <li>JavaScript</li>
-                    <li>Python</li>
-                    <li>MySQL</li>
-                    <li>MongoDB</li>
-                    <li>HTML/CSS/Bootstrap</li>
-                    <li>GitHub</li>
-                    <li>Bash/Shell</li>
-                </ul>
+            </div>
+            <div class="col-md-9 text-box text-box--skills slide-in from-right">
+                <h3>
+                    Technical Skills:
+                </h3>
+                <p>Java,
+                    JavaScript,
+                    Python,
+                    MySQL,
+                    MongoDB,
+                    HTML5,
+                    CSS3,
+                    Bootstrap,
+                    React,
+                    GitHub,
+                    Bash/Shell</p>
             </div>
         </div>
     </div>
@@ -221,28 +227,30 @@
                 <div class="row">
                     <div class="col-md-4 ps-0">
                         <label for="firstName">First Name</label>
-                        <input type="text" name="firstName" id="firstName" placeholder="First Name"/>
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name"
+                               class="border-light"/>
                     </div>
                     <div class="col-md-4 ps-0">
                         <label for="lastName">Last Name</label>
-                        <input type="text" name="lastName" id="lastName" placeholder="Last Name"/>
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="border-light"/>
                     </div>
                 </div>
 
                 <div class="row">
                     <label for="email">Email Address</label>
-                    <input type="email" name="email" id="email" placeholder="Email"/>
+                    <input type="email" name="email" id="email" placeholder="Email" class="border-light"/>
                 </div>
 
                 <div class="row">
                     <label for="subject">Subject</label>
-                    <input type="text" name="subject" id="subject" placeholder="How Can I Help You?"/>
+                    <input type="text" name="subject" id="subject" placeholder="How Can I Help You?"
+                           class="border-light"/>
                 </div>
 
                 <div class="row">
                     <label for="message">Message</label>
                     <textarea name="message" id="message" rows="10" maxlength="1501"
-                              placeholder="1500 characters max"></textarea>
+                              placeholder="1500 characters max" class="border-light"></textarea>
                 </div>
 
                 <button class="btn polished-gradient btn-lg my-3 me-4" type="reset">Reset</button>
