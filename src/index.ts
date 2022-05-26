@@ -42,7 +42,7 @@ const handlePostRequest = (request: Request, response: Response) => {
     // @ts-ignore
     if (request.recaptcha.error) {
         return response.send(
-            `<div class='alert alert-danger' role='alert'><strong>You just got reCAPTCHA'D</strong> Try not being a bot next time.</div>`
+            `<div class='alert alert-danger' role='alert'><strong>reCAPTCHA failed.</strong> Please wait, and try again.</div>`
         )
     }
 
