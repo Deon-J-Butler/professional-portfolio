@@ -143,7 +143,7 @@ function onTouchDrag() {
             if (dragSliderIndex < 1) {
                 dragSlider.style.setProperty("--slider-index", dragSlider.children.length - 1)
             } else {
-                dragSlider.style.setProperty("--slider-index", dragSliderIndex - '1')
+                dragSlider.style.setProperty("--slider-index", dragSliderIndex - 1)
             }
         }
     })
